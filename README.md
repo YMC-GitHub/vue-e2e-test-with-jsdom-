@@ -27,9 +27,9 @@ note: you can also test your project with [Vue CLI](https://cli.vuejs.org/)
 
 `webpack.config.js`
 
-01.exclude NPM deps from test bundle ([webpack.config.js](./webpack.config.js#L108)
+01.exclude NPM deps from test bundle ([webpack.config.js](./webpack.config.js#L108))
 
-02.use inline source map so that it works with mocha-webpack ([webpack.config.js](./webpack.config.js#L109)
+02.use inline source map so that it works with mocha-webpack ([webpack.config.js](./webpack.config.js#L109))
 
 
 `test/setup.js`
