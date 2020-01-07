@@ -1,0 +1,23 @@
+{
+  "env": {
+    "dev": {
+      "presets": [
+        ["@babel/preset-env", { "modules": false }]
+      ]
+    },
+    "pro": {
+      "presets": [
+        ["@babel/preset-env", { "modules": "umd" }]
+      ]
+    },
+    "tes": {
+      "presets": [
+        ["@babel/preset-env", {
+          "modules": false,
+          "targets": { "node": "current" }
+        }]
+      ],
+      "plugins": ["istanbul"]
+    }
+  }
+}

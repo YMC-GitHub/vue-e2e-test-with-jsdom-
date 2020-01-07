@@ -1,0 +1,48 @@
+{
+  "name": "vue-test-with-jsdom",
+  "description": "vue test with jsdom",
+  "version": "1.0.0",
+  "author": "yemiancheng <ymc.github@gmail.com> (https://github.com/YMC-GitHub)",
+  "private": true,
+  "scripts": {
+    "dev": "npm run build:dev",
+    "build:dev": "cross-env NODE_ENV=dev webpack-dev-server --open --hot",
+    "build:pro": "cross-env NODE_ENV=pro webpack --progress --hide-modules",
+    "tes": "cross-env NODE_ENV=tes nyc --reporter=lcov --reporter=text mocha-webpack --webpack-config webpack.config.js --require test/setup.js test/**/*.spec.js"
+  },
+  "dependencies": {
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@vue/test-utils": "^1.0.0-beta.25",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-istanbul": "^5.2.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.0.5",
+    "css-loader": "^3.2.0",
+    "expect": "^25.0.0",
+    "file-loader": "^4.2.0",
+    "jsdom": "^12.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^6.2.0",
+    "mocha-webpack": "^1.1.0",
+    "nyc": "^14.1.1",
+    "vue-loader": "^14.2.4",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.10",
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.(js|vue)"
+    ],
+    "instrument": false,
+    "sourceMap": false
+  }
+}
